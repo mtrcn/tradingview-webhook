@@ -64,7 +64,7 @@ def webhook():
             return jsonify({"error": "Base wallet not found"}), 400
 
         total_balance = float(base_wallet['available_balance']['value'])
-        if total_balance < MIN_BALANCE and action == 'buy':
+        if total_balance < float(MIN_BALANCE) and action == 'buy':
             return jsonify({"error": f"Insufficient balance to trade. Current balance: {total_balance}"}), 400
 
         if action == 'buy':
