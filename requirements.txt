@@ -1,0 +1,4 @@
+python-dotenv
+coinbase-advanced-py
+flask
+gunicorn
